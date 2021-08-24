@@ -1,0 +1,88 @@
+<div class="card">
+  <div class="card-block">
+    <h3>
+      <clr-icon shape="switch" size="28"></clr-icon>Patients Profiles
+    </h3> 
+    <br />
+
+
+    <button class="btn btn-success" (click)="dialog=true" solid>New +</button>
+
+    |
+    <a routerLink="/admin/users">
+      All
+    </a>
+    |
+  </div>
+</div>
+
+
+<clr-modal [(clrModalOpen)]="dialog">
+  <h3 class="modal-title">Add  Patient</h3>
+  <div class="modal-body">
+    <form  class="loginForm" clrStepper [formGroup]="vendorForm" (ngSubmit)="onSubmit()" clrForm>
+
+      <clr-input-container>
+        <label>First Name</label>
+        <input clrInput formControlName="firstName" required />
+      </clr-input-container>
+
+      <clr-input-container>
+        <label>Last Name</label>
+        <input clrInput formControlName="lastName" required />
+      </clr-input-container>
+
+      <clr-input-container>
+        <label>Email</label>
+        <input type="email" clrInput formControlName="email" required />
+      </clr-input-container>
+      <clr-input-container>
+        <label>Phone</label>
+        <input clrInput formControlName="phone" required />
+      </clr-input-container>
+
+
+      <clr-input-container>
+        <label>Street Address</label>
+        <input clrInput formControlName="address" required />
+      </clr-input-container>
+
+      <clr-input-container>
+        <label>City</label>
+        <input clrInput formControlName="city" required />
+      </clr-input-container>
+
+
+      <clr-input-container>
+        <label>Gender</label>
+        <input clrInput formControlName="gender" required />
+      </clr-input-container>
+
+      <clr-input-container>
+        <label>Marital Status</label>
+        <input clrInput formControlName="marital" required />
+      </clr-input-container>
+
+  
+      <clr-input-container>
+        <label>Emergency Contact Name </label>
+        <input clrInput formControlName="EcontactName" required />
+      </clr-input-container>
+
+      <clr-input-container>
+        <label>Emergency Contact Number </label>
+        <input clrInput formControlName="EcontactNumber" required />
+      </clr-input-container>
+
+
+
+
+
+
+
+      <button type="submit" class="btn btn-success">submit</button>
+
+    </form>
+  </div>
+
+</clr-modal>

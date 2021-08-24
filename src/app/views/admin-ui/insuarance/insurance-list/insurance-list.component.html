@@ -1,0 +1,51 @@
+
+<div class="limit-height">
+
+    <clr-datagrid>
+        <clr-dg-column>Reference Number</clr-dg-column>
+        <clr-dg-column [clrDgField]="'firstName'">Patient Name</clr-dg-column>
+        <clr-dg-column [clrDgField]="'lastName'">Last Name</clr-dg-column>
+        <clr-dg-column [clrDgField]="'email'">Email</clr-dg-column>
+        <clr-dg-column [clrDgField]="'phone'">Phone</clr-dg-column>
+        <clr-dg-column [clrDgField]="'gender'">Gender</clr-dg-column>
+        <clr-dg-column [clrDgField]="'marital'">Marital Status</clr-dg-column>
+
+        <clr-dg-column [clrDgField]="'address'">Address</clr-dg-column>
+        <clr-dg-column [clrDgField]="'city'">City</clr-dg-column>
+        <clr-dg-column [clrDgField]="'EcontactName'">Emergency Contact Name</clr-dg-column>
+        <clr-dg-column [clrDgField]="'EcontactNumber'">Emergency Contact Number </clr-dg-column>
+ 
+        <clr-dg-column [clrDgField]="'updatedAt'">Reported Date</clr-dg-column>
+
+        <clr-dg-row *clrDgItems="let user of levels">
+            <clr-dg-cell>{{user._id}}</clr-dg-cell>
+            <clr-dg-cell>{{user.firstName}}</clr-dg-cell>
+            <clr-dg-cell>{{user.lastName}}</clr-dg-cell>
+            <clr-dg-cell>{{user.email}}</clr-dg-cell>
+            <clr-dg-cell>{{user.phone}}</clr-dg-cell>
+            <clr-dg-cell>{{user.gender}}</clr-dg-cell>
+            <clr-dg-cell>{{user.marital}}</clr-dg-cell>
+            <clr-dg-cell>{{user.address}}</clr-dg-cell>
+            <clr-dg-cell>{{user.city}}</clr-dg-cell>
+            <clr-dg-cell>{{user.EcontactName}}</clr-dg-cell>  
+            <clr-dg-cell>{{user.EcontactNumber}}</clr-dg-cell>
+        
+
+            <clr-dg-cell>{{user.updatedAt}}</clr-dg-cell>
+
+            <clr-dg-action-overflow>
+
+                <button class="action-item" (click)="view.emit(user)">
+                    Health Records
+                </button>
+
+                <br/>
+
+         
+            </clr-dg-action-overflow>
+
+        </clr-dg-row>
+
+    </clr-datagrid>
+
+</div>

@@ -1,0 +1,32 @@
+<div class="card">
+    
+  
+      <button class="btn btn-success" (click)="dialog=true" solid>New +</button>
+  
+      |
+   
+  </div>
+  
+  
+  <clr-modal [(clrModalOpen)]="dialog">
+    <h3 class="modal-title">Add Note</h3>
+    <div class="modal-body">
+      <form  class="loginForm" clrStepper [formGroup]="vendorForm" (ngSubmit)="onSubmit()" clrForm>
+  
+        <clr-input-container>
+          <label>Details </label>
+          <textarea  layout="horizontal" clrInput formControlName="details" required > </textarea>
+        </clr-input-container>
+  
+
+  
+  
+  
+  
+        <button type="submit" class="btn btn-success">submit</button>
+  
+      </form>
+    </div>
+  
+  </clr-modal>
+  

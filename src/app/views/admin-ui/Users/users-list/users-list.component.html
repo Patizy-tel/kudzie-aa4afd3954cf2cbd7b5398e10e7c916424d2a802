@@ -1,0 +1,52 @@
+
+<p> Notes </p>
+
+<app-booking-form></app-booking-form>
+<div class="limit-height">
+
+  <clr-datagrid   (clrDgRefresh)="updatedState.emit($event)">
+   
+    <clr-dg-column [clrDgField]="'name'">Details</clr-dg-column>
+
+
+
+    <clr-dg-column [clrDgField]="'date'">Updated Date</clr-dg-column>
+
+    <clr-dg-row *clrDgItems="let user of levels">
+  
+      <clr-dg-cell>{{user.details}}</clr-dg-cell>
+    
+
+
+      <clr-dg-cell>{{user.updatedAt}}</clr-dg-cell>
+
+
+      <clr-dg-action-overflow>
+
+
+      <button class="action-item" >
+        Edit
+    </button>
+
+    <br/>
+
+
+
+    <button class="action-item" style="background-color: rgb(241, 187, 8);" >
+        Deactivate
+    </button>
+
+    <br/>
+
+    <button class="action-item" style="background-color: red; color: #fff;" >
+        Delete
+    </button>
+    </clr-dg-action-overflow>
+
+
+    </clr-dg-row>
+
+
+  </clr-datagrid>
+
+  </div>
