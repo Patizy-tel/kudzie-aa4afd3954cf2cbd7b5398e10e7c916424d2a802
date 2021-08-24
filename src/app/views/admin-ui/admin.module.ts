@@ -4,7 +4,6 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {ClarityModule} from '@clr/angular';
 import { NgApexchartsModule } from "ng-apexcharts";
 import {RouterModule} from '@angular/router';
-import { AgmCoreModule } from '@agm/core';
 import {MainPageComponent} from './main-page/main-page.component';
 import {HelperModule} from '../../helper/helper.module';
 import {LayoutComponent} from './layout/layout.component';
@@ -24,7 +23,7 @@ import {FuelFormComponent} from './Fuel/fuel-form/fuel-form.component'
         ReactiveFormsModule,
         ClarityModule,
         NgApexchartsModule,
-        RouterModule ,AgmCoreModule
+        RouterModule 
 
     ],
 
